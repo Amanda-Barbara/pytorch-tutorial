@@ -16,7 +16,8 @@ class Tudui(nn.Module):
     def __init__(self):
         super(Tudui, self).__init__()
         self.conv1 = Conv2d(in_channels=3, out_channels=6, kernel_size=3, stride=1, padding=0)
-
+        print(self.conv1.weight.shape)
+        print(self.conv1.bias.shape)
     def forward(self, x):
         x = self.conv1(x)
         return x

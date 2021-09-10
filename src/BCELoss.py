@@ -11,6 +11,7 @@ target = torch.FloatTensor([[0, 1, 1],
                             [1, 0, 1]])
 l1 = nn.BCELoss()
 loss1 = l1(out, target)
+print(input)
 print(loss1)  # tensor(1.1805)
 
 input2 = torch.FloatTensor([[1.5410, -0.2934, -2.1788],

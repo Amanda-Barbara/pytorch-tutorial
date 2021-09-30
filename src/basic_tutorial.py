@@ -12,7 +12,6 @@ t = x.view(8)      #输出维度 ：   8*1
 print(t.shape)
 t = x.view(-1)   #输出维度： 1*8
 print(t.shape)
-
 # result:
 '''
 torch.Size([2, 2, 2])
@@ -21,4 +20,20 @@ torch.Size([2, 4])
 torch.Size([8])
 torch.Size([8])
 '''
+
+x = torch.tensor([1, 2, 3])
+print(x.repeat(3, 2)) # 把x看成一个整体然后沿着特定的维度重复这个整体，
+print(x.expand(4, 3)) # x是一个1X3的矩阵，保持列的维度不变，把x看成一个整体，沿着行的方向进行复制，
+print(x.shape)
+'''
+tensor([[1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3]])
+tensor([[1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3],
+        [1, 2, 3]])
+torch.Size([3])
+'''
+
 

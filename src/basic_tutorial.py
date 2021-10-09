@@ -35,5 +35,7 @@ tensor([[1, 2, 3],
         [1, 2, 3]])
 torch.Size([3])
 '''
-
+a = torch.randn(4, 4)
+print(a, "\n", a.t())
+print(torch.max(a, a.t()).max(1))
 
